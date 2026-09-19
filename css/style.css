@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap');
 
 :root {
-    --primary: #1457ff;
+    --primary: #a435ff;
     --dark: #010101;
     --light: #fafafa;
     --gray: gray;
@@ -361,7 +361,6 @@ main {
                         background-color: transparent;
 
                         i {
-                            transform: rotate(-45deg);
                             font-size: 1.5rem;
                             color: var(--gray);
                             transition: 300ms ease all;
