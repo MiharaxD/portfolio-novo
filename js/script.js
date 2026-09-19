@@ -54,6 +54,14 @@ const trabalhos = [
         foto: 'jobs/catalogo.png',
         descricao: 'Projeto desenvolvido para simular um catálogo funcional de produtos para e-commerce, ideal para praticar a exibição de dados dinâmicos e interação com o usuário em aplicações web.',
         link: 'https://miharaxd.github.io/catalogo-online/'
+    },
+    {
+        id: 4,
+        title: 'Página clone - Nike Air Jordan',
+        tipo: 'Desenvolvimento Web',
+        foto: 'jobs/nike.png',
+        descricao: 'Recriação de uma página de detalhes de produto da Nike, desenvolvida com HTML, CSS e JavaScript.',
+        link: 'https://miharaxd.github.io/nike-air-jordan-detalhes/'
     }
 ]
 
