@@ -722,8 +722,14 @@ footer {
             display: flex;
             flex-direction: column;
 
-            .whatido ul li {
-                padding: 1rem 0 0 0;
+            .whatido {
+                h2 {
+                    width: 100%;
+                }
+
+                ul li {
+                    padding: 1rem 0 0 0;
+                }
             }
         }
 
@@ -739,5 +745,54 @@ footer {
 
     footer {
         width: 100%;
+    }
+}
+
+@media(max-width: 576px) {
+    main {
+        .hero {
+            height: 16rem;
+
+            h1 {
+                font-size: 4rem;
+            }
+
+            .lead {
+                width: 10rem;
+                font-size: .75rem;
+            }
+
+            .foto {
+                width: 12rem;
+                height: 12rem;
+                top: 4rem;
+            }
+        }
+
+        .sobre {
+            .about {
+                h2 {
+                    font-size: 1.25rem;
+                }
+            }
+
+            .whatido {
+                height: 22rem;
+
+                ul li {
+                    padding: 1rem 0;
+                    gap: 0;
+                }
+            }
+        }
+
+        .trabalhos .cards {
+            grid-template-columns: 1fr;
+        }
+
+        .contato {
+            display: flex;
+            flex-direction: column;
+        }
     }
 }
