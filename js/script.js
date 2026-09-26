@@ -144,3 +144,27 @@ window.addEventListener('keydown', (e) => {
         fecharModal()
     }
 })
+
+const btnMenu = document.getElementById('btnMenu')
+const nav = document.querySelector('nav')
+btnMenu.addEventListener('click', (e) => {
+    nav.style.display = nav.style.display === 'none' ? 'flex' : 'none'
+})
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        nav.style.display = nav.style.display === 'none' ? 'flex' : 'none'
+    }
+})
+document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target) && !btnMenu.contains(e.target)) {
+        nav.style.display = 'none'
+    }
+})
+window.addEventListener('resize', () => {
+    const width = window.innerWidth
+    if (width >= 1024) {
+        nav.style.display = 'flex'
+    } else (
+        nav.style.display = 'none'
+    )
+})

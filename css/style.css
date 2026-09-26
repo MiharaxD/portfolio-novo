@@ -29,7 +29,7 @@ a {
 }
 
 header {
-    width: 1024px;
+    width: 64rem;
     height: 4rem;
     background-color: var(--primary);
     margin: 0 auto;
@@ -48,57 +48,75 @@ header {
         }
     }
 
-    .menu {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .btnMenu {
         height: 3rem;
-        font-family: var(--inter);
+        width: 3rem;
+        border: none;
+        background-color: transparent;
+        color: var(--light);
+        font-size: 2rem;
+        display: none;
+    }
 
-        li {
-            list-style-type: none;
+    nav {
+        width: 65%;
+        display: flex;
+        justify-content: space-between;
+        z-index: 999;
 
-            a {
-                color: var(--light);
-                display: flex;
-                height: 3rem;
-                width: fit-content;
-                padding: 0.5rem 1rem;
-                align-items: center;
-                justify-content: center;
-                text-decoration: none;
-                font-weight: 600;
+        .menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 3rem;
+            font-family: var(--inter);
 
-                &:hover {
-                    color: var(--dark);
+            li {
+                list-style-type: none;
+
+                a {
+                    color: var(--light);
+                    display: flex;
+                    height: 3rem;
+                    width: fit-content;
+                    padding: 0.5rem 1rem;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                    font-weight: 600;
+
+                    &:hover {
+                        color: var(--dark);
+                    }
                 }
             }
         }
-    }
 
-    .social {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        padding-right: 1rem;
 
-        li {
-            list-style-type: none;
-            transition: 300ms ease all;
+        .social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            padding-right: 1rem;
 
-            a {
-                width: 2rem;
-                height: 2rem;
-                font-size: 1.25rem;
-                color: var(--light);
-            }
-
-            &:hover {
-                transform: scale(1.25);
+            li {
+                list-style-type: none;
+                transition: 300ms ease all;
 
                 a {
-                    color: var(--dark);
+                    width: 2rem;
+                    height: 2rem;
+                    font-size: 1.25rem;
+                    color: var(--light);
+                }
+
+                &:hover {
+                    transform: scale(1.25);
+
+                    a {
+                        color: var(--dark);
+                    }
                 }
             }
         }
@@ -106,7 +124,7 @@ header {
 }
 
 main {
-    width: 1024px;
+    width: 64rem;
     margin: 1rem auto;
     display: flex;
     flex-direction: column;
@@ -114,7 +132,7 @@ main {
 
     .hero {
         width: 100%;
-        height: 500px;
+        height: 32rem;
         position: relative;
 
         h1 {
@@ -143,8 +161,8 @@ main {
         }
 
         .foto {
-            width: 500px;
-            height: 500px;
+            width: 32rem;
+            height: 32rem;
             border-radius: 50%;
             overflow: hidden;
             position: absolute;
@@ -224,7 +242,7 @@ main {
                 li {
                     list-style-type: none;
                     display: grid;
-                    grid-template-columns: repeat(4rem, 1fr);
+                    grid-template-columns: 4rem 1fr;
                     grid-template-rows: repeat(2, 2rem);
                     gap: 0 1rem;
                     padding: 1rem 0;
@@ -611,7 +629,7 @@ main {
 }
 
 footer {
-    width: 1024px;
+    width: 64rem;
     height: 4rem;
     margin: 0 auto;
     background-color: var(--primary);
@@ -624,5 +642,102 @@ footer {
         font-family: var(--inter);
         color: var(--light);
         font-size: .875rem;
+    }
+}
+
+@media(min-width: 1921px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 1024px) {
+    header {
+        width: 100%;
+        position: relative;
+
+        .btnMenu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        nav {
+            width: 10rem;
+            height: auto;
+            flex-direction: column;
+            background-color: var(--primary);
+            position: absolute;
+            top: 4rem;
+            right: 2rem;
+            border-radius: 0rem 0rem 1rem 1rem;
+            display: none;
+
+
+            .menu {
+                flex-direction: column;
+                height: 10rem;
+                gap: .2rem;
+
+                li {
+                    width: 100%;
+                    height: 2rem;
+
+                    a {
+                        width: 100%;
+                        height: 2rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+
+            .social {
+                width: 100%;
+                height: 2rem;
+                padding: 0;
+            }
+        }
+    }
+
+    main {
+        width: 100%;
+
+        .hero {
+            height: 20rem;
+
+            h1 {
+                font-size: 6rem;
+            }
+
+            .foto {
+                height: 20rem;
+                width: 20rem;
+            }
+        }
+
+        .sobre {
+            display: flex;
+            flex-direction: column;
+
+            .whatido ul li {
+                padding: 1rem 0 0 0;
+            }
+        }
+
+        .trabalhos .cards {
+            grid-template-columns: repeat(2, 1fr);
+
+            .card .text {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    footer {
+        width: 100%;
     }
 }
